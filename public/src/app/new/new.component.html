@@ -1,0 +1,14 @@
+<a [routerLink] ="['/home']">Home</a>
+<p>Add a new quotable author:</p>
+
+<form >
+    <label>Name:</label>
+    <input type="text" 
+        name="newauthor.name" 
+        [(ngModel)]="newauthor.name"
+        #name = 'ngModel'
+        required
+        minlength="3"
+    >
+    <button [routerLink] ="['/home']">Cancel</button><button *ngIf ="name.valid" (click)=addnewauthor()>Submit</button>
+</form>

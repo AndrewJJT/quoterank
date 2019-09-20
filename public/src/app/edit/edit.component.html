@@ -1,0 +1,9 @@
+
+<a [routerLink] = "['/home']">Home</a>
+<p>Edit this author</p>
+<p *ngIf = "errors" style="color: red"> {{errors.errors.name.message}}</p>
+<div>
+    <label>Name:</label>
+     <input type="text" name="selectedAuthor.name" [(ngModel)] ="selectedAuthor.name">
+    <button [routerLink] ="['/home']">Cancel</button> <button (click)="UpdateAuthor()">Submit</button> 
+</div>
